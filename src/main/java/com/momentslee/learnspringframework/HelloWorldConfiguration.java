@@ -32,12 +32,17 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
-    public Person person3Parameters(String name, int age, Address address2) {
-        return new Person(name, age, address2);
+    public Person person3Parameters(String name, int age, Address address3) {
+        return new Person(name, age, address3);
     }
 
     @Bean(name = "address2")
     public Address address() {
         return new Address("Baker Street", "London");
+    }
+
+    @Bean(name = "address3")
+    public Address address3() {
+        return new Address("Motinagar", "Hyderabad");
     }
 }
