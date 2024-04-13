@@ -1,4 +1,4 @@
-package com.momentslee.learnspringframework;
+package com.momentslee.learnspringframework.helloworld;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
