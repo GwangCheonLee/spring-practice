@@ -1,7 +1,5 @@
-package com.momentslee.learnspringframework;
+package com.momentslee.learnspringframework.game;
 
-import com.momentslee.learnspringframework.game.GameRunner;
-import com.momentslee.learnspringframework.game.GamingConsole;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
