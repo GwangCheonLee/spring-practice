@@ -1,5 +1,6 @@
 package com.momentslee.learnspringframework;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -43,6 +44,11 @@ public class HelloWorldConfiguration {
         return new Person(name, age, address);
     }
 
+    @Bean
+    public Person person5Qualifier(String name, int age, @Qualifier("address3qualifier") Address address) {
+        return new Person(name, age, address);
+    }
+
     @Bean(name = "address2")
     @Primary
     public Address address() {
@@ -50,6 +56,7 @@ public class HelloWorldConfiguration {
     }
 
     @Bean(name = "address3")
+    @Qualifier("address3qualifier")
     public Address address3() {
         return new Address("Motinagar", "Hyderabad");
     }
