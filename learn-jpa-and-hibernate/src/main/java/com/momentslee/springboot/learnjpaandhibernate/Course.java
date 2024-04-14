@@ -16,7 +16,6 @@ public class Course {
     @Column()
     private String author;
 
-    //    annotation
     protected Course() {
         this.id = 0;
         this.name = null;

@@ -6,19 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseJdbcCommandLineRunner implements CommandLineRunner {
     private final CourseJdbcRepository courseJdbcRepository;
+    private final CourseJpaRepository courseJpaRepository;
 
-    public CourseJdbcCommandLineRunner(CourseJdbcRepository courseJdbcRepository) {
+    public CourseJdbcCommandLineRunner(CourseJdbcRepository courseJdbcRepository, CourseJpaRepository courseJpaRepository) {
         this.courseJdbcRepository = courseJdbcRepository;
+        this.courseJpaRepository = courseJpaRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
-        courseJdbcRepository.insert(new Course(1, "Learn Microservices", "GwangCheonLee"));
-        courseJdbcRepository.insert(new Course(2, "Learn AWS", "GwangCheonLee"));
-        courseJdbcRepository.insert(new Course(3, "Learn GCP", "GwangCheonLee"));
-        courseJdbcRepository.deleteById(1);
-
-        System.out.println(courseJdbcRepository.findById(2));
 
     }
 }
