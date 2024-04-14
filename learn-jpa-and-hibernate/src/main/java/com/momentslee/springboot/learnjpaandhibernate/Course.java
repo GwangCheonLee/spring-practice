@@ -1,11 +1,23 @@
 package com.momentslee.springboot.learnjpaandhibernate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+
+    @Id
     private long id;
+
+    @Column()
     private String name;
+
+    @Column()
     private String author;
 
-    private Course() {
+    //    annotation
+    protected Course() {
         this.id = 0;
         this.name = null;
         this.author = null;
