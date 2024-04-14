@@ -13,12 +13,12 @@ public class CourseJpaCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        courseJpaRepository.insert(new Course(1, "Learn Microservices", "GwangCheonLee"));
-        courseJpaRepository.insert(new Course(2, "Learn AWS", "GwangCheonLee"));
-        courseJpaRepository.insert(new Course(3, "Learn GCP", "GwangCheonLee"));
-        courseJpaRepository.deleteById(1);
+//        courseJpaRepository.insert(new Course(1, "Learn Microservices", "GwangCheonLee"));
+//        courseJpaRepository.insert(new Course(2, "Learn AWS", "GwangCheonLee"));
+//        courseJpaRepository.insert(new Course(3, "Learn GCP", "GwangCheonLee"));
+//        courseJpaRepository.deleteById(1);
 
-        System.out.println(courseJpaRepository.findById(2));
+//        System.out.println(courseJpaRepository.findById(2));
 
     }
 }
