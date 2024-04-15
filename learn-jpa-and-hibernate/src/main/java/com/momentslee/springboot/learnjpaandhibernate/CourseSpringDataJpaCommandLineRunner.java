@@ -22,5 +22,9 @@ public class CourseSpringDataJpaCommandLineRunner implements CommandLineRunner {
         System.out.println(this.courseSpringDataJpaRepository.findById(2L));
         System.out.println(this.courseSpringDataJpaRepository.findById(3L));
 
+        System.out.println(this.courseSpringDataJpaRepository.findAll());
+        System.out.println(this.courseSpringDataJpaRepository.count());
+        System.out.println(this.courseSpringDataJpaRepository.findByAuthor("GwangCheonLee"));
+
     }
 }
